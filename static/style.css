@@ -1,0 +1,282 @@
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(
+    135deg,
+    #fff4ee,
+    #f6f9ff);
+
+    padding:20px;
+}
+
+.container{
+
+    width:950px;
+    max-width:100%;
+
+    background:#fff;
+
+    border-radius:30px;
+
+    padding:40px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* HEADER */
+
+.header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo{
+
+    width:130px;
+    height:auto;
+
+    margin-bottom:15px;
+
+    animation:
+    floatLogo 4s ease-in-out infinite;
+}
+
+@keyframes floatLogo{
+
+    0%{
+        transform:translateY(0);
+        filter:drop-shadow(0 0 0px rgba(255,107,53,.4));
+    }
+
+    50%{
+        transform:translateY(-15px);
+        filter:drop-shadow(0 0 20px rgba(255,107,53,.8));
+    }
+
+    100%{
+        transform:translateY(0);
+        filter:drop-shadow(0 0 0px rgba(255,107,53,.4));
+    }
+}
+
+.header h1{
+
+    color:#ff6b35;
+
+    font-size:48px;
+
+    margin-bottom:10px;
+}
+
+.header p{
+
+    color:#666;
+
+    font-size:18px;
+}
+
+/* CHAT SECTION */
+
+#chat-box{
+
+    background:#fafafa;
+
+    border:1px solid #ededed;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+}
+
+.welcome-card{
+
+    background:#fff7f3;
+
+    border-left:6px solid #ff6b35;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    margin-bottom:25px;
+}
+
+.welcome-card h2{
+
+    color:#ff6b35;
+
+    margin-bottom:10px;
+}
+
+.welcome-card p{
+
+    color:#555;
+
+    line-height:1.7;
+}
+
+/* FOOD CARDS */
+
+.food-cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(140px,1fr));
+
+    gap:15px;
+
+    margin-bottom:25px;
+}
+
+.card{
+
+    background:#ffffff;
+
+    border:1px solid #ececec;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all .3s ease;
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#ff6b35;
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,.08);
+}
+
+/* MESSAGE BOX */
+
+.message-box{
+
+    background:#fff;
+
+    border:1px solid #ececec;
+
+    border-radius:12px;
+
+    padding:18px;
+
+    text-align:center;
+
+    color:#444;
+
+    line-height:1.6;
+}
+
+/* INPUT AREA */
+
+.input-area{
+
+    display:flex;
+
+    gap:12px;
+}
+
+.input-area input{
+
+    flex:1;
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:16px;
+}
+
+.input-area input:focus{
+
+    outline:none;
+
+    border-color:#ff6b35;
+
+    box-shadow:
+    0 0 10px rgba(255,107,53,.2);
+}
+
+.input-area button{
+
+    background:#ff6b35;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:15px 30px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.input-area button:hover{
+
+    background:#e55a28;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .container{
+        padding:20px;
+    }
+
+    .header h1{
+        font-size:34px;
+    }
+
+    .logo{
+        width:100px;
+    }
+
+    .food-cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .input-area{
+        flex-direction:column;
+    }
+
+    .input-area button{
+        width:100%;
+    }
+}

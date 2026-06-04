@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChefBot AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <!-- Replace chefbot.png with your plate/spoon image -->
+        <img src="{{ url_for('static', filename='chefbot.png') }}"
+     alt="ChefBot Logo"
+     class="logo">
+
+        <h1>🍽️ ChefBot AI</h1>
+        <p>Your Smart Cloud Kitchen Assistant</p>
+
+    </div>
+
+    <div id="chat-box">
+
+        <div class="welcome-card">
+            <h2>👋 Welcome to ChefBot AI!</h2>
+
+            <p>
+                I'm your smart food assistant. Tell me what you're craving
+                today and I'll help you find the perfect meal.
+            </p>
+        </div>
+
+        <div class="food-cards">
+
+            <div class="card">🍕<br>Pizza</div>
+
+            <div class="card">🍔<br>Burgers</div>
+
+            <div class="card">🥗<br>Veg Meals</div>
+
+            <div class="card">🍗<br>Non-Veg</div>
+
+            <div class="card">🍛<br>Biryani</div>
+
+        </div>
+
+        <div class="message-box">
+            Ask me about menu items, recommendations,
+            pricing, offers or food combinations.
+        </div>
+
+    </div>
+
+    <div class="input-area">
+
+        <input
+            type="text"
+            id="user-input"
+            placeholder="What would you like to eat today?">
+
+        <button onclick="sendMessage()">
+            Send
+        </button>
+
+    </div>
+
+</div>
+
+<script src="/static/app.js"></script>
+
+</body>
+</html>
